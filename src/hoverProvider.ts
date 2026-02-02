@@ -166,8 +166,21 @@ export class VersionsAtlasHoverProvider implements vscode.HoverProvider {
     md.appendMarkdown(`**📦 ${dependencyName}** versions across projects:\n\n`);
 
     for (const { projectName, version } of versions) {
-      const displayVersion = version || "_not used_";
-      md.appendMarkdown(`• **${projectName}**: \`${displayVersion}\`\n\n`);
+      let icon: string;
+      let displayVersion: string;
+
+      if (!version) {
+        icon = "";
+        displayVersion = "_not used_";
+      } else if (version === currentVersion) {
+        icon = " ✓";
+        displayVersion = `\`${version}\``;
+      } else {
+        icon = " ✗";
+        displayVersion = `\`${version}\``;
+      }
+
+      md.appendMarkdown(`• **${projectName}**: ${displayVersion}${icon}\n\n`);
     }
 
     md.appendMarkdown(`---\n\n`);
