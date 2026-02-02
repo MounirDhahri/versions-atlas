@@ -5,6 +5,24 @@ VS Code extension to view dependency versions across multiple projects when hove
 
 <img width="300" src="images/preview.png">
 
+## Installation
+
+### VS Code Marketplace
+
+Search for "Versions Atlas" in the Extensions view (`Cmd+Shift+X` / `Ctrl+Shift+X`).
+
+### Terminal
+
+**VS Code:**
+```bash
+code --install-extension Mounir.versions-atlas
+```
+
+**Cursor:**
+```bash
+cursor --install-extension Mounir.versions-atlas
+```
+
 ## Usage
 
 1. Configure projects in VS Code settings:
@@ -52,3 +70,7 @@ Or use local paths instead:
 ## Commands
 
 - **Versions Atlas: Refresh Cache** - Clear cached data and fetch fresh versions
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests on [GitHub](https://github.com/MounirDhahri/versions-atlas).
