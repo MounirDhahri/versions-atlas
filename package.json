@@ -2,8 +2,17 @@
   "name": "versions-atlas",
   "displayName": "Versions Atlas",
   "description": "View dependency versions across multiple projects when hovering over package.json dependencies",
-  "version": "0.0.1",
-  "publisher": "versions-atlas",
+  "version": "0.1.0",
+  "publisher": "MounirDhahri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MounirDhahri/versions-atlas.git"
+  },
+  "homepage": "https://github.com/MounirDhahri/versions-atlas#readme",
+  "bugs": {
+    "url": "https://github.com/MounirDhahri/versions-atlas/issues"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
