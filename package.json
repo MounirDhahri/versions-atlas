@@ -1,0 +1,69 @@
+{
+  "name": "versions-atlas",
+  "displayName": "Versions Atlas",
+  "description": "View dependency versions across multiple projects when hovering over package.json dependencies",
+  "version": "0.0.1",
+  "publisher": "versions-atlas",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:json"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Versions Atlas",
+      "properties": {
+        "versionsAtlas.projects": {
+          "type": "array",
+          "default": [],
+          "description": "List of projects to track dependency versions from",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Display name for the project"
+              },
+              "packageJsonUrl": {
+                "type": "string",
+                "description": "URL to the raw package.json file (e.g., https://raw.githubusercontent.com/org/repo/main/package.json)"
+              },
+              "localPath": {
+                "type": "string",
+                "description": "Local path to package.json file (e.g., ~/projects/my-repo/package.json)"
+              }
+            },
+            "required": ["name"]
+          }
+        },
+        "versionsAtlas.cacheTTL": {
+          "type": "number",
+          "default": 300000,
+          "description": "Cache time-to-live in milliseconds (default: 5 minutes)"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "versionsAtlas.refreshCache",
+        "title": "Versions Atlas: Refresh Cache"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
