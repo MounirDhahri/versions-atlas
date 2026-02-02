@@ -4,6 +4,7 @@
   "description": "View dependency versions across multiple projects when hovering over package.json dependencies",
   "version": "0.1.0",
   "publisher": "Mounir",
+  "icon": "images/icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -1,6 +1,9 @@
 # Versions Atlas
 
+
 VS Code extension to view dependency versions across multiple projects when hovering over package.json dependencies.
+
+<img width="300" src="images/preview.png">
 
 ## Usage
 
