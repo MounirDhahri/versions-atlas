@@ -3,7 +3,7 @@
   "displayName": "Versions Atlas",
   "description": "View dependency versions across multiple projects when hovering over package.json dependencies",
   "version": "0.1.0",
-  "publisher": "MounirDhahri",
+  "publisher": "Mounir",
   "license": "MIT",
   "repository": {
     "type": "git",
